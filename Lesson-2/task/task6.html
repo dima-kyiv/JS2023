@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ДЗ №2 Лінійно обов'язкове, задача 6</title>
+  </head>
+  <body>
+    <h1>Задача 6</h1>
+    <p>
+      З клавіатури вводяться вартість товару та кількість одиниць 3 товарів.
+      Обчислити вартість кожного товару окремо та загальну вартість. Вивести чек
+      (як у супермаркеті) використовуючи елементи розмітки.
+    </p>
+    <script>
+      //1. Вводимо необхідні данні
+      let priceWare1 = parseFloat(prompt("Введіть ціну товару№1=", "0"));
+      let amountWare1 = parseFloat(prompt("Введіть кількість товару№1=", "0"));
+      let priceWare2 = parseFloat(prompt("Введіть ціну товару№2=", "0"));
+      let amountWare2 = parseFloat(prompt("Введіть кількість товару№21=", "0"));
+      let priceWare3 = parseFloat(prompt("Введіть ціну товару№3=", "0"));
+      let amountWare3 = parseFloat(prompt("Введіть кількість товару№3=", "0"));
+
+      //2. Знаходимо результат
+      let totalCostWare1 = priceWare1 * amountWare1;
+      let totalCostWare2 = priceWare2 * amountWare2;
+      let totalCostWare3 = priceWare3 * amountWare3;
+      let totalCost = totalCostWare1 + totalCostWare2 + totalCostWare3;
+
+      //3. Виводимо результат
+      document.write(`
+			<table border = "1px">
+        		<tr>
+					<td>Товар1 , ${amountWare1}од. <br>x ${priceWare1}грн</td>
+					<th>${totalCostWare1}</th>
+				</tr>
+				<tr>
+					<td>Товар2 , ${amountWare2}од. <br>x ${priceWare2}грн</td>
+					<th>${totalCostWare2}</th>
+				</tr>
+				<tr>
+					<td>Товар3 , ${amountWare3}од. <br>x ${priceWare3}грн</td>
+					<th>${totalCostWare3}</th>
+				</tr>
+				<tr>
+					<td> Загальна вартість</td>
+					<th>${totalCost}</th>
+				</tr>
+		</table>
+        `);
+    </script>
+  </body>
+</html>

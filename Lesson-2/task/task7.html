@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ДЗ №2 Лінійно обов'язкове, задача 7</title>
+  </head>
+  <body>
+    <h1>Задача 7</h1>
+    <p>
+      Знайти суму випадкового номера місяця (від 1 до 12) та випадкового номера
+      дня (від 0 до 6).
+    </p>
+    <script>
+      //1. Вводимо необхідні данні
+      let minMonth = 1,
+        maxMonth = 12;
+      let minDay = 0,
+        maxDay = 6;
+
+      //2. Знаходимо результат
+      let month =
+        minMonth + Math.floor(Math.random() * (maxMonth - minMonth + 1));
+      let day = minDay + Math.floor(Math.random() * (maxDay - minDay + 1));
+      let sum = month + day;
+
+      //3. Виводимо результат
+      document.write(`сума: ${sum}`);
+    </script>
+  </body>
+</html>

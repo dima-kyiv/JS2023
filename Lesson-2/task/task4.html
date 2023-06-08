@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ДЗ №2 Лінійно обов'язкове, задача 4</title>
+  </head>
+  <body>
+    <h1>Задача 4</h1>
+    <p>Дано довжину у сантиметрах. Визначати скільки це метрів і кілометрів.</p>
+    <script>
+      //1. Вводимо необхідні данні
+      let lengthCM = parseInt(prompt("Довжина у сантиметрах=", "0"));
+
+      //2. Знаходимо результат
+      let lengthM = lengthCM / 100;
+      let lengthKM = lengthCM / 100000;
+
+      //3. Виводимо результат
+      document.write(`
+		Довжина у сантиметрах: ${lengthCM} см<br>
+		Довжина у метрах: ${lengthM} м<br>
+		Довжина у кілометрах: ${lengthKM} км<br>`);
+    </script>
+  </body>
+</html>
